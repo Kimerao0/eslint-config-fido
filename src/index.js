@@ -33,6 +33,11 @@ Object.assign(plugin.configs, {
         'react/jsx-no-useless-fragment': 'warn',
         'react/no-unescaped-entities': 'warn',
         '@typescript-eslint/no-unused-expressions': 'warn',
+        '@typescript-eslint/ban-ts-comment': 'warn',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-explicit-any': 'warn',
+        'react/display-name': 'off',
+        'react/no-unescaped-entities': 'off',
       },
       languageOptions: {
         ...reactRecommended.languageOptions,

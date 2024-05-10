@@ -16,24 +16,20 @@ yarn add --dev eslint prettier
 
 ## Usage
 
-Import this config into your own ESLint configuration using the `extends` option. ESLint checks both package.json and .eslintrc.* files for its configuration:
 
-### package.json
-
-```js
-{
-  "eslintConfig": {
-    "extends": "@fido.id/eslint-config-fido"
-  }
-}
-```
-
-### .eslintrc.js
+### eslint.config.js
 
 ```js
-module.exports = {
-  extends: "@fido.id/eslint-config-fido"
-};
+const fido = require("@fido.id/eslint-config-fido");
+module.exports = [
+  ...fido.configs.recommended,
+  {
+    rules: {
+      ...
+    },
+  },
+];
+
 ```
 
 ## Customizing Prettier
